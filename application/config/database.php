@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'nanyukiappfactory-mysqldbserver.mysql.database.azure.com',
-	'username' => 'bartertrade@nanyukiappfactory-mysqldbserver',
-	'password' => 'bartrade@#',
-	'database' => 'barter_trades',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'barter_trade',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
