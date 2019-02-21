@@ -15,15 +15,15 @@ class Auth_model extends CI_Model{
         {
             $row=$query->row();
             $user=array(
-                "first_name"=>$row->user_first_name,
-                "last_name"=>$row->user_last_name,
-                "phone_number"=>$row->user_phone_number,
+                "first_name"=>$row->first_name,
+                "last_name"=>$row->last_name,
+                "phone_number"=>$row->phone_number,
                 "email"=>$row->user_email,
                 "id"=>$row->user_id,
                 "login_status"=>TRUE
             );
             $this->session->set_userdata($user);
-            $this->session->set_flashdata("success","welcome back ".$row->user_first_name);
+            $this->session->set_flashdata("success","welcome back ".$row->first_name);
             return TRUE;
         }
         else
