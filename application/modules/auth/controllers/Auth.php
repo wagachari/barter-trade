@@ -1,7 +1,8 @@
 <?php
 if(!defined ('BASEPATH'))exit ("No direct script allowed");
 
-class Auth extends MX_Controller{
+class Auth extends MX_Controller
+{
     function __Construct(){
         parent:: __Construct();
        $this->load->model("auth/auth_model");
@@ -38,9 +39,13 @@ class Auth extends MX_Controller{
     );
     $this->load->view("site/layouts/login",$data);
 }
+
 public function admin_logout(){
-    echo "logout";
-    $this->session->sess_destroy();
+    // echo "logout";
+
+    // $this->session->sess_destroy();
+
+    $this->session->unset_userdata('user_data');
     
     redirect('admin/login');
 }

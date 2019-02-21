@@ -22,7 +22,7 @@ class Auth_model extends CI_Model{
                 "id"=>$row->user_id,
                 "login_status"=>TRUE
             );
-            $this->session->set_userdata($user);
+            $this->session->set_userdata('user_data', $user);
             $this->session->set_flashdata("success","welcome back ".$row->first_name);
             return TRUE;
         }
