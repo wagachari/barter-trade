@@ -17,15 +17,13 @@ exit('No direct script access allowed');  ?>
 
 <body>
 
-	<div class="container-fluid" >
-
+	<div class="container-fluid">
 		<?php
             echo form_open('backoffice/Manage_users/execute_search');
             
             echo form_input(array('name' => 'search'));
             
-            echo form_submit('search_submit', 'Submit');
-            
+            echo form_submit('search_submit', 'Submit');            
 
 			echo form_close();
 			?>
