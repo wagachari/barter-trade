@@ -2,76 +2,56 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_Add_user extends CI_Migration {
+class Migration_Add_item extends CI_Migration {
 
         public function up()
         {
                 $this->dbforge->add_field(array(
-                        'user_id' => array(
+                        'item_id' => array(
                                 'type' => 'INT',
                                 'constraint' => 11,
                                 'unsigned' => TRUE,
                                 'auto_increment' => TRUE
                         ),
-                        'first_name' => array(
+                        'item_name' => array(
                                 'type' => 'VARCHAR',
                                 'constraint' => '100',
                         ),
-                        'last_name' => array(
+                        'item_description' => array(
                                 'type' => 'VARCHAR',
-                                'constraint' => '100',
+                                'constraint' => '255',
                         ),
-                        'profile_icon' => array(
-                            'type' => 'VARCHAR',
-                            'constraint' => '100',
+                        'item_cost' => array(
+                            'type' => 'DOUBLE',
                         ),
-                        'profile_thumb' => array(
-                            'type' => 'VARCHAR',
-                            'constraint' => '255',
-                        ),                        
-                        'phone_number' => array(
-                            'type' => 'VARCHAR',
-                            'constraint' => '100',
-                        ),
-                        'username' => array(
-                            'type' => 'VARCHAR',
-                            'constraint' => '100',
-                            
-                        ),
-                        'user_email' => array(
-                            'type' => 'VARCHAR',
-                            'constraint' => '100',
-                           
-                        ),
-                        'password' => array(
-                            'type' => 'VARCHAR',
-                            'constraint' => '100',
-                            
-                        ),
-                        'user_status' => array(
+                        
+                        'sale_offer_status' => array(
                             'type' => 'TINYINT',
                             'constraint' => '1',
                             'default'=>'1'
-                        ),
-                        //
-                        'user_type_id' => array(
+                        ),'item_status' => array(
+                                'type' => 'TINYINT',
+                                'constraint' => '1',
+                                'default'=>'1'
+                        ),//
+                        'user_id' => array(
                             'type' => 'int',
                             'constraint' => 10,
                             'unsigned' => TRUE,
                             'null' => FALSE,
                             'foreign_key' => array( //relationship
-                            'table' => 'user_type', // table to
-                            'field' => 'user_type_id',
+                            'table' => 'user', // table to
+                            'field' => 'user_id',
                             'auto_increment' => FALSE // field to
                             )),
-                        'location_id' => array(
+                        'category_id' => array(
                             'type' => 'int',
                             'constraint' => 10,
                             'unsigned' => TRUE,
                             'null' => FALSE,
                             'foreign_key' => array( //relationship
-                            'table' => 'location', // table to
-                            'field' => 'location_id', 
+                            'table' => 'category', // table to
+                            'field' => 'category_id', 
                             'auto_increment' => FALSE// field to
                             )),
                     
@@ -85,12 +65,12 @@ class Migration_Add_user extends CI_Migration {
                 $this->dbforge->add_field("`deleted_by` int NULL");
                 $this->dbforge->add_field("`deleted` tinyint NOT NULL DEFAULT 0");
                 $this->dbforge->add_field("`deleted_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP");
-                $this->dbforge->add_key('user_id', TRUE);
-                $this->dbforge->create_table('user');
+                $this->dbforge->add_key('item_id', TRUE);
+                $this->dbforge->create_table('item');
         }
 
         public function down()
         {
-                $this->dbforge->drop_table('user');
+                $this->dbforge->drop_table('item');
         }
 }
