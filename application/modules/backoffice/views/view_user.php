@@ -51,7 +51,7 @@ exit('No direct script access allowed');  ?>
 			<?php
             
             if($all_users->num_rows() > 0){
-                $count=$page;
+                $count=0;
                 foreach($all_users->result()
                  as $row){
                     {
