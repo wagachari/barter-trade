@@ -10,14 +10,14 @@ class Manage_items_model extends CI_Model
         $file_name = $upload_response['file_name'];
         $thumb_name = $upload_response['thumb_name'];
         $data = array(
-            "first_name" => $this->input->post("first_name"),
-            "last_name" => $this->input->post("last_name"),
-            "phone_number" => $this->input->post("phone_number"),
-            "itemname" => $this->input->post("itemname"),
-            "item_email" => $this->input->post("item_email"),
-            "password" => md5($this->input->post("password")),
-            "profile_icon"=> $file_name,
-            "profile_thumb"=> $thumb_name,
+            "item_name" => $this->input->post("item_name"),
+            "item_description" => $this->input->post("item_description"),
+            "item_cost" => $this->input->post("item_cost"),
+            //TODO make the user ID dynamic
+            "user_id" => 1,
+            "category_id" => $this->input->post("category_name"),
+            //"item_image_name"=> $file_name,
+            //"profile_thumb"=> $thumb_name,
             "deleted"=>0
         );
 
@@ -29,7 +29,36 @@ class Manage_items_model extends CI_Model
            return false;
         }
     }
-   
+   public function add_desired_item(){
+    $data = array(
+        array(
+        "desired_item_name" => $this->input->post("item1"),
+        "category_id" => $this->input->post("category_name"),
+        "user_id" => 1,
+        "deleted"=>0
+    ),
+    array(
+        "desired_item_name" => $this->input->post("item2"),
+        "category_id" => $this->input->post("category_name"),
+        "user_id" => 1,
+        "deleted"=>0
+    ),
+    array(
+        "desired_item_name" => $this->input->post("item3"),
+        "category_id" => $this->input->post("category_name"),
+        "user_id" => 1,
+        "deleted"=>0
+    )
+    );
+
+    
+    if( $this->db->insert_batch("desired_item", $data)){
+       return true;
+    }
+    else{
+       return false;
+    }
+   }
     public function get_item($limit, $start)
     {
         $this->db->where("deleted",0);

@@ -2,7 +2,12 @@
 exit('No direct script access allowed');  ?>
 <!DOCTYPE html>
 <html>
+<head>
+<style>
 
+</style>
+
+</head>
 
 <body>
 
@@ -19,8 +24,9 @@ exit('No direct script access allowed');  ?>
 ?>
 			
 		<?php echo form_open_multipart($this->uri->uri_string()); ?>
-
+		<section>
 		<div class="form-group">
+
 			<label for="category"><b>Select Category</b></label>
 			<select name="category_name" id="categories" class="form-control form-control-lg inputform">
 			<?php 
@@ -56,28 +62,26 @@ exit('No direct script access allowed');  ?>
  
              
         </div>
-		<div class="form-group"> 
-		<label for='desired_item_1'>Desired Item 1: </label>
-		
-			<input class="form-control" type="text" name="desired_item_1">
-		</div>
+				
+</div>
+</section>
+<div class="form-group">
+<h2>Desired item</h2>
+<div class="row">
+<div class="col-md-4 col-sm-12">
+<div class="form-group">
+<label>Item 1</label>
+<input type="text" class="form-control" name="item1">
+<label>Item 2</label>
+<input type="text" class="form-control" name="item2">
+<label>Item 3</label>
+<input type="text" class="form-control" name="item3">
 
-
-		<div class="form-group"> 
-		<label for='desired_item_2'>Desired Item 2: </label>
-		
-			<input class="form-control" type="text" name="desired_item_2">
-		</div>
-
-	<div class="form-group"> 
-		<label for='desired_item_3'>Desired Item 3: </label>
-		
-			<input class="form-control" type="text" name="desired_item_3">
-		</div>
-	
+</div>
+</div>
+</div>
 		
 		<div>
-
 			<input type="submit" value="Add" class="button1">
 		</div>
 		<?php echo form_close(); ?>
@@ -88,8 +92,7 @@ exit('No direct script access allowed');  ?>
 </div>
 
 </div>
-</div>
-\
+
 </body>
 
 </html>
