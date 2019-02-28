@@ -101,7 +101,7 @@ exit('No direct script access allowed');  ?>
 				<td>
 				
 				
-					<a href="#individualUser<?php echo $id?>"  class="btn btn-primary" data-toggle="modal" data-target="#individualUser<?php echo $id?>">View</a>
+					<a href="#individualUser<?php echo $id?>"  class="btn btn-primary" data-toggle="modal" data-target="#individualUser<?php echo $id?>"><i class="fas fa-eye"></i></a>
 					<!-- Button trigger modal -->
 
 
@@ -162,19 +162,19 @@ exit('No direct script access allowed');  ?>
 											<td>
 
 												
-                    <button class="btn btn-warning"><?php echo anchor("backoffice/Manage_users/edit_update/".$id,"Edit");?></button>
+                    <button class="btn btn-warning"><?php echo anchor("backoffice/Manage_users/edit_update/".$id,"<i class='fas fa-edit'></i>");?></button>
 					<?php
 					 if($check==0){
-						echo anchor("backoffice/Manage_users/activate/".$id,"Activate", array("onclick"=>"return confirm('Are you sure to activate?')", "class"=>"btn btn-success"));
+						echo anchor("backoffice/Manage_users/activate/".$id,'<i class="far fa-thumbs-up"></i>', array("onclick"=>"return confirm('Are you sure to activate?')", "class"=>"btn btn-success"));
 					
 					 }
 					 else
 					 {
-						echo anchor("backoffice/Manage_users/deactivate/".$id,"Deactivate", array("onclick"=>"return confirm('Are you sure to deactivate?')","class"=>"btn btn-danger"));
+						echo anchor("backoffice/Manage_users/deactivate/".$id,'<i class="far fa-thumbs-down"></i>', array("onclick"=>"return confirm('Are you sure to deactivate?')","class"=>"btn btn-danger"));
 					 }
 					 
 					 ?>
-                    <button class="btn btn-danger" onclick="return confirm('Are you sure to delete?')"> <?php echo anchor("backoffice/Manage_users/delete/".$id,"Delete");?></button> </td> </tr>
+                    <button class="btn btn-danger" onclick="return confirm('Are you sure to delete?')"> <?php echo anchor("backoffice/Manage_users/delete/".$id,"<i class='fas fa-trash-alt'></i>");?></button> </td> </tr>
 									</table>
 								</div>
 								<div class="modal-footer">
@@ -189,16 +189,16 @@ exit('No direct script access allowed');  ?>
                     <button class="btn btn-warning"><?php echo anchor("backoffice/Manage_users/edit_update/".$id,"Edit");?></button>
 					 <?php
 					 if($check==0){
-						echo anchor("backoffice/Manage_users/activate/".$id,"Activate", array("onclick"=>"return confirm('Are you sure to activate?')", "class"=>"btn btn-success"));
+						echo anchor("backoffice/Manage_users/activate/".$id,'<i class="far fa-thumbs-up"></i>', array("onclick"=>"return confirm('Are you sure to activate?')", "class"=>"btn btn-success"));
 					
 					 }
 					 else
 					 {
-						echo anchor("backoffice/Manage_users/deactivate/".$id,"Deactivate", array("onclick"=>"return confirm('Are you sure to deactivate?')","class"=>"btn btn-danger"));
+						echo anchor("backoffice/Manage_users/deactivate/".$id,'<i class="far fa-thumbs-down"></i>', array("onclick"=>"return confirm('Are you sure to deactivate?')","class"=>"btn btn-danger"));
 					 }
 					 
 					 ?>
-                    <button class="btn btn-danger" onclick="return confirm('Are you sure to delete?')"> <?php echo anchor("backoffice/Manage_users/delete/".$id,"Delete");?></button>
+                    <button class="btn btn-danger" onclick="return confirm('Are you sure to delete?')"> <?php echo anchor("backoffice/Manage_users/delete/".$id,"<i class='fas fa-trash-alt'></i>");?></button>
                      </td> </tr> <?php }}} ?>
 		</table>
 		<!-- <//?php echo ('<div id="pagination">'. $this->pagination->create_links().'</div>');?> -->

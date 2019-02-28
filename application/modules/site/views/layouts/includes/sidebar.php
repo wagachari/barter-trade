@@ -28,6 +28,13 @@
       <li class="nav-item">
         <a class="nav-link active" href="#">
           <span data-feather="home"></span>
+          <?php echo anchor("backoffice/Manage_category/add_category","Manage Categories"); ;?> <span class="sr-only">(current)</span>
+         
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">
+          <span data-feather="home"></span>
           <?php echo anchor("backoffice/Message_user/index","Manage Locations"); ;?> <span class="sr-only">(current)</span>
          
         </a>

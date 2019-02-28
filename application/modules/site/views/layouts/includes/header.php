@@ -13,3 +13,5 @@
 <link href="<?php echo base_url();?>assets/themes/custom/styles.css" rel="stylesheet"/>
 <?php } ?>
 <link href="<?php echo base_url();?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="<?php echo base_url();?>assets/vendor/fontawesome/css/all.css" rel="stylesheet">

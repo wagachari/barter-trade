@@ -179,6 +179,7 @@ class Manage_users extends MX_Controller
     
     public function deactivate($id,$limit = NULL, $start = NULL)
     {
+        echo "Hello";
        $limit = $limit == NULL ? $this->per_page : $limit;
        $start = $start == NULL ? 1 : $start;
        $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
