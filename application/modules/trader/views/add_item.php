@@ -46,6 +46,10 @@ exit('No direct script access allowed');  ?>
 			<textarea name="item_description" rows="10" cols="30">describe the item..</textarea>
 		</div>
 		<div class="form-group">
+			<label for='item_cost'>Estimated Value: </label>
+			<input class="form-control" type="text" name="item_cost">
+		</div>
+		<div class="form-group">
                  <label>Select Item Image</label>
                    <input type="file"  id="item_image" name="item_image_name">
                  
