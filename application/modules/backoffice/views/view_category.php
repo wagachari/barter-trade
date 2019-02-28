@@ -8,7 +8,7 @@
 		<?php echo $title;?>
 	</title>
 
-	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url()?>assets/themes/custom/styles.css" />
 	<!-- <script src="main.js"></script> -->
 </head>
@@ -36,13 +36,13 @@
 				<th>Category Name
 				</th>
 				<th>Parent
-				</th>				
+				</th>
 				<th>Image
 				</th>
 				<th>Status
 				</th>
 				<th>Actions
-                </th>
+				</th>
 			</tr>
 			<?php
             
@@ -69,10 +69,10 @@
 				<td>
 					<?php echo $category_parent;?>
 				</td>
-				
+
 				<td><img class="thumbnail" style="height: 100px; width: 100px;" src="<?php echo base_url(); ?>assets/uploads/<?php echo $row->category_image; ?>" /></td>
 				<td>
-				
+
 					<?php if($check==0)
 					{
 						echo "<button class='badge badge-danger'> deactivated</button>";
@@ -83,11 +83,12 @@
 					}
 					?>
 				</td>
-				
+
 				<td>
-				
-				
-					<a href="#category<?php echo $id?>"  class="btn btn-primary" data-toggle="modal" data-target="#category<?php echo $id?>"><i class="fas fa-eye"></i></a>
+
+
+					<a href="#category<?php echo $id?>" class="btn btn-primary" data-toggle="modal" data-target="#category<?php echo $id?>"><i
+						 class="fas fa-eye"></i></a>
 					<!-- Button trigger modal -->
 
 
@@ -107,35 +108,36 @@
 								<div class="modal-body">
 									<table class="table">
 										<tr>
-                                        <th>#
-                                        </th>
-										<th>Category Parent
-                                        </th>
-                                        <th>Category Name
-                                        </th>                                       		
-                                        <th>Image
-                                        </th>
-                                        
-										<th>Actions
-                                        </th>
-										</tr>
-	
-										<tr>
-                                        <td>
-                                            <?php echo $count;?>
-                                        </td>
-										<td>
-                                            <?php echo $category_parent;?>
-                                        </td>
-                                        <td>
-                                            <?php echo $category_name;?>
-                                        </td>
-                                        <td><img class="thumbnail" style="height: 100px; width: 100px;" src="<?php echo base_url(); ?>assets/uploads/<?php echo $row->category_image; ?>" /></td>
-										<td>
+											<th>#
+											</th>
+											<th>Category Parent
+											</th>
+											<th>Category Name
+											</th>
+											<th>Image
+											</th>
 
-												
-										<button class="btn btn-warning"><?php echo anchor("backoffice/Manage_users/edit_update/".$id,"<i class='fas fa-edit'></i>");?></button>
-					<?php
+											<th>Actions
+											</th>
+										</tr>
+
+										<tr>
+											<td>
+												<?php echo $count;?>
+											</td>
+											<td>
+												<?php echo $category_parent;?>
+											</td>
+											<td>
+												<?php echo $category_name;?>
+											</td>
+											<td><img class="thumbnail" style="height: 100px; width: 100px;" src="<?php echo base_url(); ?>assets/uploads/<?php echo $row->category_image; ?>" /></td>
+											<td>
+
+
+												<button class="btn btn-warning">
+													<?php echo anchor("backoffice/Manage_users/edit_update/".$id,"<i class='fas fa-edit'></i>");?></button>
+												<?php
 					 if($check==1){
 						echo anchor("backoffice/Manage_category/deactivate/".$id,'<i class="far fa-thumbs-down"></i>', array("onclick"=>"return confirm('Are you sure to deactivate?')", "class"=>"btn btn-danger"));
 					
@@ -146,7 +148,10 @@
 					 }
 					 
 					 ?>
-                    <button class="btn btn-danger" onclick="return confirm('Are you sure to delete?')"> <?php echo anchor("backoffice/Manage_category/delete/".$id,"<i class='fas fa-trash-alt'></i>");?></button> </td></tr>
+												<button class="btn btn-danger" onclick="return confirm('Are you sure to delete?')">
+													<?php echo anchor("backoffice/Manage_category/delete/".$id,"<i class='fas fa-trash-alt'></i>");?></button>
+											</td>
+										</tr>
 									</table>
 								</div>
 								<div class="modal-footer">
@@ -157,9 +162,10 @@
 						</div>
 					</div>
 
-					
-                    <button class="btn btn-warning"><?php echo anchor("backoffice/Manage_category/edit_update/".$id,"<i class='fas fa-edit'></i>");?></button>
-					 <?php
+
+					<button class="btn btn-warning">
+						<?php echo anchor("backoffice/Manage_category/edit_update/".$id,"<i class='fas fa-edit'></i>");?></button>
+					<?php
 					 if($check==1){
 						echo anchor("backoffice/Manage_category/deactivate/".$id,'<i class="far fa-thumbs-down"></i>', array("onclick"=>"return confirm('Are you sure to deactivate?')", "class"=>"btn btn-danger"));
 					
@@ -170,12 +176,14 @@
 					 }
 					 
 					 ?></button>
-                    <button class="btn btn-danger" onclick="return confirm('Are you sure to delete?')"> <?php echo anchor("backoffice/Manage_category/delete/".$id,"<i class='fas fa-trash-alt'></i>");?></button>
-                     </td> </tr> <?php }}} ?>
+					<button class="btn btn-danger" onclick="return confirm('Are you sure to delete?')">
+						<?php echo anchor("backoffice/Manage_category/delete/".$id,"<i class='fas fa-trash-alt'></i>");?></button>
+				</td>
+			</tr>
+			<?php }}} ?>
 		</table>
-		
+
 	</div>
 </body>
 
 </html>
-

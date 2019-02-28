@@ -103,18 +103,15 @@ class Manage_category extends MX_Controller
         $this->load->view("site/layouts/layout", $data);
 
     }
-//more on crud
+
 public function delete($category_id){
-    // Check whether member id is not empty
-    
-        // Delete member
-              
+          
     $this->Manage_category_model->delete($category_id);
 
     redirect("backoffice/Manage_category");
     
 }
-
+//deactivate
 public function deactivate($id)
 {
    
@@ -149,6 +146,7 @@ public function activate($id)
     $this->load->view("site/layouts/layout", $data);
     redirect("backoffice/Manage_category");
 }
+//edit update
 public function edit_update($id){
     $this->form_validation->set_rules("category_parent", 'Category Parent', "required");
     $this->form_validation->set_rules("category_name", 'Category Name', "required");

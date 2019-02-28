@@ -12,11 +12,11 @@
 </head>
 
 <body>
-<?php if (!empty($validation_errors)) {
+	<?php if (!empty($validation_errors)) {
     echo $validation_errors;
 }
 ?>
-<?php echo form_open($this->uri->uri_string()); ?>
+	<?php echo form_open($this->uri->uri_string()); ?>
 	<div class="container-fluid" style="margin-top:10px">
 
 
@@ -27,20 +27,20 @@
 
 
 				<div class="form-control">
-        <label for="role_name">Role Name</label>
+					<label for="role_name">Role Name</label>
 					<select name="role_name">
-          <?php
+						<?php
 
 foreach ($roles->result() as $rows) {
     $role_id = $rows->role_id;
     $role_name = $rows->role_name;
 
     ?>
-						<option value="<?php echo $role_id ?>" >
+						<option value="<?php echo $role_id ?>">
 							<?php echo $role_name ?>
 						</option>
 
-				<?php }
+						<?php }
 
 ?>
 
@@ -53,31 +53,31 @@ foreach ($roles->result() as $rows) {
 			<div class="col">
 
 				<div class="form-control">
-        <label for="user_type_name">User type name</label>
+					<label for="user_type_name">User type name</label>
 					<select name="user_type_name">
-          <?php
+						<?php
 
 foreach ($user_types->result() as $rows) {
     $user_type_id = $rows->user_type_id;
     $user_type_name = $rows->user_type_name;
 
     ?>
-						<option value="<?php echo $user_type_id ?>" >
+						<option value="<?php echo $user_type_id ?>">
 							<?php echo $user_type_name ?>
 						</option>
-            <?php }
+						<?php }
 
 ?>
 					</select>
 				</div>
 
 			</div>
-				<input type="submit" name="submit" class="btn btn-success" value="Submit">
-
-			</div>
+			<input type="submit" name="submit" class="btn btn-success" value="Submit">
 
 		</div>
-<?php echo form_close(); ?>
+
+	</div>
+	<?php echo form_close(); ?>
 </body>
 
 </html>
