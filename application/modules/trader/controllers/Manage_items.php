@@ -79,7 +79,7 @@ class Manage_items extends MX_Controller
             else
             {
                 
-                if($this->Manage_items_model->add_item($upload_response)&&$this->Manage_items_model->add_desired_item())
+                if($this->Manage_items_model->add_item()&&$this->Manage_items_model->add_desired_item()&&$this->Manage_items_model->add_item_image($upload_response))
                 {
                     $this->session->set_flashdata('success', 'item Added successfully!!');
                     redirect("trader/Manage_items/new_item");
