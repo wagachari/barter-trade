@@ -37,6 +37,18 @@ class Manage_items_model extends CI_Model
         $this->db->limit($limit, $start);
         return $this->db->get('item');
     }
+    //get categories
+    public function get_all_categories() { 
+        $this->db->select("*");
+        $this->db->from("category");
+        $this->db->where("deleted",0);
+       
+        return $result=$this->db->get();
+
+        
+    } 
+
+
     public function get_all_items()
     {
         $this->db->where("deleted",0);

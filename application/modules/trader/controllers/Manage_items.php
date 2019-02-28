@@ -58,6 +58,7 @@ class Manage_items extends MX_Controller
         $v_data = array("results" => $this->Manage_items_model->get_results($search_term));
 
         $data = array(
+           
             "title" => $this->site_model->display_page_title(),
             "content" => $this->load->view("trader/execute_search", $v_data, true),
         );
@@ -108,7 +109,7 @@ class Manage_items extends MX_Controller
     public function new_item()
     {
         //form validation
-        $this->form_validation->set_rules("first_name", 'First Name', "required");
+        $this->form_validation->set_rules("item_name", 'First Name', "required");
         $this->form_validation->set_rules("last_name", 'Last Name', "required");    
         $this->form_validation->set_rules("phone_number", 'Phone Number', "required|numeric");    
         $this->form_validation->set_rules("itemname", 'itemname', "required");
@@ -155,10 +156,13 @@ class Manage_items extends MX_Controller
            }
         }
            
-        $v_data = array("validation_errors" => validation_errors());
+        $v_data = array("validation_errors" => validation_errors(),
+        "categories" => $this->Manage_items_model->get_all_categories(),
+    
+    );
 
         $data = array(
-
+           
             "title" => $this->site_model->display_page_title(),
             "content" => $this->load->view("trader/add_item", $v_data, true),
         );
