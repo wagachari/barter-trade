@@ -32,4 +32,19 @@ class Auth_model extends CI_Model
             return false;
         }
     }
+
+    public function validate_session()
+    {
+        $login_status = $this->session->userdata("login_status");
+
+        if($login_status == TRUE)
+        {
+            return TRUE;
+        }
+
+        else
+        {
+            return FALSE;
+        }
+    }
 }

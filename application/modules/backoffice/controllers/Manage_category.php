@@ -1,7 +1,9 @@
 <?php
-if (!defined('BASEPATH')) 
-exit('No direct script access allowed'); 
-class Manage_category extends MX_Controller
+if (!defined('BASEPATH')) exit('No direct script access allowed'); 
+
+require_once "./application/modules/admin/controllers/Admin.php";
+
+class Manage_category extends admin 
 {
     public $upload_path;
     public $upload_location;
