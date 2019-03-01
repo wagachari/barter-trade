@@ -19,17 +19,6 @@
 <div class="card shadow mb-4 mt-4">
 <div class="card-header py-3">
 
-		<?php
-            echo form_open('backoffice/Manage_category/execute_search');
-            
-            echo form_input(array('name' => 'search'));
-            
-            echo form_submit('search_submit', 'Submit');
-            
-
-			echo form_close();
-			?>
-		<h1>Categories</h1>
 		<?php echo anchor ("backoffice/Manage_category/add_category/", "add category"); ?>
 		<table class="table table-sm">
 			<tr>

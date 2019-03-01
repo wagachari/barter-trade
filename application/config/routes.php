@@ -65,3 +65,8 @@ $route['translate_uri_dashes'] = FALSE;
 // $route['backoffice/Manage_users(:num)'] = 'backoffice/Manage_users/$1';
 //Auth routes
 $route['admin/login']='auth/Auth/login_admin';
+$route['manage-users/index']='backoffice/Manage_users/index';
+$route['manage-category/index']='backoffice/Manage_category/index';
+$route['manage-roles/index']='backoffice/Manage_role/index';
+$route['manage-user-type-role/index']='backoffice/Manage_user_type_role/index';
+
