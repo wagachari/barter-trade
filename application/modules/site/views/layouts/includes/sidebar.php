@@ -1,125 +1,43 @@
 
 
-  <nav class="col-md-2 d-none d-md-block bg-light sidebar mt-50">
-  <div class="sidebar-sticky" style ="margin-top:25%;">
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar mt-50" >
+  <div class="sidebar-sticky pt-5" >
   
-    <ul class="nav flex-column"> 
+    <ul class="nav flex-column pl-5"> 
       
-       
-      <li class="nav-item">
-        <a class="nav-link active" href="#">
-          <span data-feather="home"></span>
-          <?php echo anchor("backoffice/Manage_users/index","View users");?> <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="home"></span>
-          <?php echo anchor("backoffice/Manage_user_type_role","Manage user type roles");?> <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">
-          <span data-feather="home"></span>
-          <?php echo anchor("backoffice/admin_portal","Import/Export"); ;?> <span class="sr-only">(current)</span>
-         
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">
-          <span data-feather="home"></span>
-          <?php echo anchor("backoffice/Message_user/index","Manage Locations"); ;?> <span class="sr-only">(current)</span>
-         
-        </a>
-      </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link active" href="#">
-          <span data-feather="home"></span>
-          <//?php echo anchor("friends/friends/execute_search","Hello"); ;?> <span class="sr-only">(current)</span>
-         
-        </a>
-      </li> -->
+    <li>
+      <a class="nav-link" href="<?php echo base_url();?>backoffice/Manage_users/index">
+                  <i class="fas fa-users"></i>
+                  Users
+                </a>
+     </li>
+     <hr>
+      
+      <li>
+      <a class="nav-link" href="<?php echo base_url();?>backoffice/Manage_user_type_role">
+      <i class="fas fa-user"></i>
+                  User Type Role
+                </a>
+     </li>
+     <hr>
+     <li>
+      <a class="nav-link" href="<?php echo base_url();?>backoffice/Manage_role">
+      <i class="fas fa-tasks"></i>
+                  Roles
+                </a>
+                </li>
+                <hr>
+                <li>
+      <a class="nav-link" href="<?php echo base_url();?>backoffice/Manage_category/add_category">
+      <i class="fas fa-pizza-slice"></i>
+                  Categories
+                </a>
+                </li>
+      <hr>
+     
      
       
     </ul>
   </div>
 </nav>
 
-
-<!-- <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <span data-feather="home"></span>
-              Dashboard <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Customers
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Integrations
-            </a>
-          </li>
-        </ul>
-
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <a class="d-flex align-items-center text-muted" href="#">
-            <span data-feather="plus-circle"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Year-end sale
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    -->
-    

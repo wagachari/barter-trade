@@ -17,10 +17,6 @@ class Migration_Add_desired_item extends CI_Migration {
                                 'type' => 'VARCHAR',
                                 'constraint' => '100',
                         ),
-                        'desired_item_description' => array(
-                                'type' => 'VARCHAR',
-                                'constraint' => '255',
-                        ),
                         'desired_item_status' => array(
                                 'type' => 'TINYINT',
                                 'constraint' => '1',

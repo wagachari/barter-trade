@@ -4,7 +4,6 @@ exit('No direct script access allowed');
 class Manage_users_model extends CI_Model
 {
     protected $table = "user";
-    //public function add_user($user_image)
     public function add_user($upload_response)
     {
         $file_name = $upload_response['file_name'];
@@ -30,28 +29,21 @@ class Manage_users_model extends CI_Model
         }
     }
    
-    public function get_user($limit, $start)
+    public function get_user()
     {
         $this->db->where("deleted",0);
         $this->db->order_by("created_on", "DESC");
-        $this->db->limit($limit, $start);
         return $this->db->get('user');
     }
-    public function get_all_users()
-    {
-        $this->db->where("deleted",0);
-        $this->db->order_by("created_on", "DESC");
-
-        return $this->db->get('user');
-    }
+   
     public function get_single($user_id)
     {
         $this->db->where("user_id", $user_id);
         return $this->db->get("user");
     }
+
     public function get_results($search_term = 'default')
     {
-// Use the Active Record class for safer queries.
         $this->db->select('*');
         $this->db->where("deleted",0);
         $this->db->from('user');
@@ -63,12 +55,7 @@ class Manage_users_model extends CI_Model
 // Return the results.
         return $query->result_array();
     }
-//pagination
-    public function get_count()
-    {
-        return $this->db->count_all($this->table);
-    }
-    //delete
+
     public function delete($id){
         // Delete member data
         $this->db->set("deleted", 1,"modified_on",date("Y-m-d H:i:s"),"deleted_on",date("Y-m-d H:i:s"));
@@ -86,14 +73,14 @@ class Manage_users_model extends CI_Model
         }
         
     }
-    public function deactivate_user($id, $limit,$start)
+    public function deactivate_user($id)
     {
         
         $this->db->where("user_id",$id);
        $this->db->set("user_status",0);
        if($this->db->update("user"))
        {
-            $remain=$this->get_user($limit, $start);
+            $remain=$this->get_user();
             $this->session->set_flashdata("success","You have deactivated".$id);
             return $remain;
        }
@@ -104,14 +91,14 @@ class Manage_users_model extends CI_Model
        }
     }
     //activate
-    public function activate_user($id, $limit,$start)
+    public function activate_user($id)
     {
         
         $this->db->where("user_id",$id);
        $this->db->set("user_status",1);
        if($this->db->update("user"))
        {
-            $remain=$this->get_user($limit, $start);
+            $remain=$this->get_user();
             $this->session->set_flashdata("success","You have activated".$id);
             return $remain;
        }

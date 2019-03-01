@@ -21,22 +21,9 @@ class Manage_users extends MX_Controller
 
     public function index()
     {
-        //Pagination
-        $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
-        $per_page = 1000;
-        $config = array();
-        
-        $config["total_rows"] = $this->Manage_users_model->get_count();
-        $config["base_url"] = base_url() . "backoffice/Manage_users/";
-        $config["per_page"] = $per_page;
-       //$config["total_rows"] = $this->Manage_users_model->get_user($config["per_page"], $page);
-
-        $this->pagination->initialize($config);
-        
-
         $v_data = array(
-            "all_users" => $this->Manage_users_model->get_user($config["per_page"], $page),
-            "page" => $page,
+            "all_users" => $this->Manage_users_model->get_user(),
+           
         );
 
         $data = array(
@@ -114,10 +101,7 @@ class Manage_users extends MX_Controller
         $this->form_validation->set_rules("username", 'Username', "required");
         $this->form_validation->set_rules("user_email", 'User Email', "required");
         $this->form_validation->set_rules("password", 'Password', "required");
-        // $this->form_validation->set_rules("location", 'location', "required");
         
-        // $validation_errors = '';
-        // $this->load->library('image_lib');
         if ($this->form_validation->run()) {
            
             $resize = array(
@@ -177,13 +161,10 @@ class Manage_users extends MX_Controller
         
     }
     
-    public function deactivate($id,$limit = NULL, $start = NULL)
+    public function deactivate($id)
     {
-       $limit = $limit == NULL ? $this->per_page : $limit;
-       $start = $start == NULL ? 1 : $start;
-       $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
 
-        $load_deactivate=$this->Manage_users_model->deactivate_user($id, $limit, $start);
+        $load_deactivate=$this->Manage_users_model->deactivate_user($id);
         $v_data = array(
             "all_users" =>  $load_deactivate,
             "page"=>$page
@@ -198,13 +179,10 @@ class Manage_users extends MX_Controller
         redirect("backoffice/Manage_users");
     }
     //activate
-    public function activate($id,$limit = NULL, $start = NULL)
+    public function activate($id)
     {
-       $limit = $limit == NULL ? $this->per_page : $limit;
-       $start = $start == NULL ? 1 : $start;
-       $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
-
-        $load_activate=$this->Manage_users_model->activate_user($id, $limit, $start);
+       
+        $load_activate=$this->Manage_users_model->activate_user($id);
         $v_data = array(
             "all_users" =>  $load_activate,
             "page"=>$page
@@ -225,10 +203,6 @@ class Manage_users extends MX_Controller
         $this->form_validation->set_rules("username", 'Username', "required");
         $this->form_validation->set_rules("user_email", 'User Email', "required");
         
-        // $this->form_validation->set_rules("location", 'location', "required");
-        
-        // $validation_errors = '';
-        // $this->load->library('image_lib');
         if ($this->form_validation->run()) {
            
             $resize = array(
