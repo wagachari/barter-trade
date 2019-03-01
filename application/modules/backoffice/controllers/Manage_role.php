@@ -193,10 +193,9 @@ public function edit_update($id){
     if($role->num_rows()>0)
     {
         $row=$role->row();
-        $role_parent = $row->role_parent;
+        $parent = $row->parent;
         $role_name = $row->role_name;
-        $role_image = $row->role_image;
-        
+              
        
     }
     

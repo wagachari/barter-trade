@@ -17,7 +17,9 @@
 }
 ?>
 	<?php echo form_open($this->uri->uri_string()); ?>
-	<div class="container-fluid" style="margin-top:10px">
+	<div class="shadow-lg p-3 mb-5 bg-white rounded">
+		<div class="card shadow mb-4 mt-4">
+			<div class="card-header py-3">
 
 
 
@@ -76,7 +78,10 @@ foreach ($user_types->result() as $rows) {
 
 		</div>
 
+		</div>
+		</div>
 	</div>
+</div>
 	<?php echo form_close(); ?>
 </body>
 

@@ -15,7 +15,9 @@
 
 <body>
 
-	<div class="container-fluid" style="margin-top:50px;margin-left:50px;">
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+<div class="card shadow mb-4 mt-4">
+<div class="card-header py-3">
 
 		<?php
             echo form_open('backoffice/Manage_category/execute_search');
@@ -184,6 +186,9 @@
 		</table>
 
 	</div>
+	</div>
+	</div>
+
 </body>
 
 </html>
