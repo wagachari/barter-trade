@@ -15,21 +15,11 @@
 
 <body>
 
-<div class="shadow-lg p-3 mb-5 bg-white rounded">
+<div class="shadow-lg p-3 mb-5 mt-5 bg-white rounded">
 		<div class="card shadow mb-4 mt-4">
 			<div class="card-header py-3">
 
-		<!-- </?php
-            echo form_open('backoffice/Manage_role/execute_search');
-            
-            echo form_input(array('name' => 'search'));
-            
-            echo form_submit('search_submit', 'Submit');
-            
-
-			echo form_close();
-			?> -->
-		
+		 
 		</div>
 		<?php echo anchor ("backoffice/Manage_role/add_role/", "add role"); ?>
 		<table class="table table-sm">

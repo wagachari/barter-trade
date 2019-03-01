@@ -17,20 +17,15 @@
 }
 ?>
 	<?php echo form_open($this->uri->uri_string()); ?>
-	<div class="shadow-lg p-3 mb-5 bg-white rounded">
-		<div class="card shadow mb-4 mt-4">
-			<div class="card-header py-3">
+	<div class="shadow-lg p-3 mb-5 mt-5 bg-white rounded">
 
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+					<div class="form-group">
 
-
-		<div class="form-row">
-
-			<div class="col">
-
-
-				<div class="form-control">
-					<label for="role_name">Role Name</label>
-					<select name="role_name">
+					<select class="selectpicker form-control pl-5" data-style="btn-outline-primary"  name="role_name">
+					<optgroup label="Condiments" data-max-options="2">
+					<option value="" disabled selected>Select Role Name...
 						<?php
 
 foreach ($roles->result() as $rows) {
@@ -47,16 +42,11 @@ foreach ($roles->result() as $rows) {
 ?>
 
 					</select>
-				</div>
-
-
-			</div>
-
-			<div class="col">
-
-				<div class="form-control">
-					<label for="user_type_name">User type name</label>
-					<select name="user_type_name">
+				
+			<br>
+					<select class="selectpicker form-control pl-5" data-style="btn-outline-primary" name="user_type_name">
+					<optgroup label="Condiments" data-max-options="2">
+					<option value="" disabled selected>Select User Type Name...
 						<?php
 
 foreach ($user_types->result() as $rows) {
@@ -74,14 +64,9 @@ foreach ($user_types->result() as $rows) {
 				</div>
 
 			</div>
-			<input type="submit" name="submit" class="btn btn-success" value="Submit">
-
+			</div>
+		<input type="submit" name="submit" class="btn btn-success" value="Submit">
 		</div>
-
-		</div>
-		</div>
-	</div>
-</div>
 	<?php echo form_close(); ?>
 </body>
 
