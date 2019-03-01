@@ -102,11 +102,11 @@
   <br><br>
 
   <!-- start of latest offers -->
-  <div class="container">
-    <div class="d-flex align-self-center border-top border-right border-bottom"><h1>Latest offers</h1></div>
+  <div class="container" style="margin-bottom:2.5%;">
+  <div class="d-flex align-items-start border-right border-left"><h1>Latest offers</h1></div>
     <div class="bd-example">
       <div id="carouselExampleCaptions2" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators" style="background-color:#56D2AC;">
+        <ol class="carousel-indicators" style="background-color:#56D2AC;"> <br>
           <li data-target="#carouselExampleCaptions2" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleCaptions2" data-slide-to="1"></li>
         </ol>
@@ -118,21 +118,21 @@
                 <img src="<?php echo base_url();?>assets/images/product1.jpg" class="card-img-top" alt="..." style="height:200px;width:100%;">
                 <div class="card-body">
                   <p class="card-text" style="text-align:center;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <p style="color:black;text-align:center;font-weight:bold;">Ksh. 234</p>
+                  <p style="color:black;text-align:center;font-weight:bold;">Ksh.234</p>
                 </div>
               </div>
               <div class="card" style="width: 18rem;">
                 <img src="<?php echo base_url();?>assets/images/product1.jpg" class="card-img-top" alt="..." style="height:200px;width:100%;">
                 <div class="card-body">
                   <p class="card-text" style="text-align:center;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <p style="color:black;text-align:center;font-weight:bold;">Ksh. 234</p>
+                  <p style="color:black;text-align:center;font-weight:bold;">Ksh.234</p>
                 </div>
               </div>
               <div class="card" style="width: 18rem;">
                 <img src="<?php echo base_url();?>assets/images/product1.jpg" class="card-img-top" alt="..." style="height:200px;width:100%;">
                 <div class="card-body">
                   <p class="card-text" style="text-align:center;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <p style="color:black;text-align:center;font-weight:bold;">Ksh. 234</p>
+                  <p style="color:black;text-align:center;font-weight:bold;">Ksh.234</p>
                 </div>
               </div>
             </div>
@@ -146,21 +146,21 @@
                 <img src="<?php echo base_url();?>assets/images/product2.jpg" class="card-img-top" alt="..." style="height:200px;width:100%;">
                 <div class="card-body">
                   <p class="card-text" style="text-align:center;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <p style="color:black;text-align:center;font-weight:bold;">Ksh. 234</p>
+                  <p style="color:black;text-align:center;font-weight:bold;">Ksh.234</p>
                 </div>
               </div>
               <div class="card" style="width: 18rem;">
                 <img src="<?php echo base_url();?>assets/images/product3.jpg" class="card-img-top" alt="..." style="height:200px;width:100%;">
                 <div class="card-body">
                   <p class="card-text" style="text-align:center;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <p style="color:black;text-align:center;font-weight:bold;">Ksh. 234</p>
+                  <p style="color:black;text-align:center;font-weight:bold;">Ksh.234</p>
                 </div>
               </div>
               <div class="card" style="width: 18rem;">
                 <img src="<?php echo base_url();?>assets/images/product3.jpg" class="card-img-top" alt="..." style="height:200px;width:100%;">
                 <div class="card-body">
                   <p class="card-text" style="text-align:center;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <p style="color:black;text-align:center;font-weight:bold;">Ksh. 234</p>
+                  <p style="color:black;text-align:center;font-weight:bold;">Ksh.234</p>
                 </div>
               </div>
             </div>
@@ -172,5 +172,11 @@
   </div>
   
   <!-- end of latest offers -->
+
+  <!-- start of major categories -->
+    <div class="container" style="background-color:#f2f2f2">
+      <div class="d-flex justify-content-center border-left"><h1>Major categories</h1></div>
+    </div>
+  <!-- end of major categories -->
 </body>
 </html>
